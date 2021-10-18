@@ -10,9 +10,9 @@ for i in range(len(rand_prices)):
         rand_prices[i] += ' руб 00 коп'
     elif rand_prices[i].find('.') != -1:
         if rand_prices[i][-2:].find('.') != -1:
-            rand_prices[i] = rand_prices[i][:-2] + ' руб ' + rand_prices[i][-1:] + '0 коп '
+            rand_prices[i] = rand_prices[i][:-2] + ' руб ' + rand_prices[i][-1:] + '0 коп'
         else:
-            rand_prices[i] = rand_prices[i][:-3] + ' руб ' + rand_prices[i][-2:] + ' коп '
+            rand_prices[i] = rand_prices[i][:-3] + ' руб ' + rand_prices[i][-2:] + ' коп'
 print(', '.join(rand_prices))
 print()
 
@@ -26,9 +26,9 @@ for i in range(len(prices_less)):
         prices_less[i] += ' руб 00 коп'
     elif prices_less[i].find('.') != -1:
         if prices_less[i][-2:].find('.') != -1:
-            prices_less[i] = prices_less[i][:-2] + ' руб ' + prices_less[i][-1:] + '0 коп '
+            prices_less[i] = prices_less[i][:-2] + ' руб ' + prices_less[i][-1:] + '0 коп'
         else:
-            prices_less[i] = prices_less[i][:-3] + ' руб ' + prices_less[i][-2:] + ' коп '
+            prices_less[i] = prices_less[i][:-3] + ' руб ' + prices_less[i][-2:] + ' коп'
 print(', '.join(prices_less))
 print()
 
@@ -41,7 +41,7 @@ for i in range(len(max_prices)):
         max_prices[i] += ' руб 00 коп'
     elif max_prices[i].find('.') != -1:
         if max_prices[i][-2:].find('.') != -1:
-            max_prices[i] = max_prices[i][:-2] + ' руб ' + max_prices[i][-1:] + '0 коп '
+            max_prices[i] = max_prices[i][:-2] + ' руб ' + max_prices[i][-1:] + '0 коп'
         else:
-            max_prices[i] = max_prices[i][:-3] + ' руб ' + max_prices[i][-2:] + ' коп '
+            max_prices[i] = max_prices[i][:-3] + ' руб ' + max_prices[i][-2:] + ' коп'
 print(', '.join(max_prices))

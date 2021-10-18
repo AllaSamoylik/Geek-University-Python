@@ -1,5 +1,6 @@
 init_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
 
+# Обработка списка
 i = 0
 while i < len(init_list):
     if init_list[i].isdigit():
@@ -15,9 +16,13 @@ while i < len(init_list):
             i += 2
     else:
         i += 1
+print(init_list)
 
-init_list[1:4] = [''.join(init_list[1:4])]
-init_list[3:6] = [''.join(init_list[3:6])]
-init_list[8:11] = [''.join(init_list[8:11])]
-
+# В красивую строку
+i = 0
+while i < len(init_list):
+    if init_list[i] == '"':
+        init_list[i:(i+3)] = [''.join(init_list[i:(i+3)])]
+    else:
+        i += 1
 print(' '. join(init_list))

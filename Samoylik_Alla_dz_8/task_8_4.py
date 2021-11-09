@@ -1,11 +1,11 @@
 from functools import wraps
 
 
-def val_checker(condition):
+def condition(setting):
     def decorator(func):
         @wraps(func)
         def wrapper(arg):
-            if condition(arg) is False:
+            if setting(arg) is False:
                 msg = f'wrong val {arg}'
                 raise ValueError(msg)
             else:
@@ -16,7 +16,7 @@ def val_checker(condition):
     return decorator
 
 
-@val_checker(lambda x: x > 0)
+@condition(lambda x: x > 0)
 def calc_cube(x):
     return x ** 3
 
